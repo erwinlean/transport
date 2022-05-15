@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importes</title>
+    <link rel="stylesheet" href="./estilomalvinas.css">
+    <meta name="author" content="Erwin Leandro Marte">
+    <meta name="copyright" content="Erwin Leandro Marte">
+    <meta name="description" content="">
+    <link rel="icon" href="./img/mapIcon.png" />
+    <meta name="keywords" content="importes">
+    <meta name="robots" content="index"> 
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="navHeader">
+                <div id="logo" class="logos">
+                    <img src="./img/islas_malvinas.jpeg" alt="logo Malvinas"> 
+                </div>
+                <div id="nav">
+                    <div class="navA">
+                        <a href="#navHeader" alt="inicio">Inicio</a>
+                    </div>
+                    <div class="navA"> 
+                        <a href="#importe" alt="calculador">Calculos e importes</a>
+                    </div>
+                    <div class="navA"> 
+                        <a href="https://dispatch.vtoms.com/app" target="_blank" alt="Dispatch">Dispatch</a>
+                    </div>
+                    <div class="navA">
+                        <a href="#footer" alt="contactos, pie de pagina" >Contactos</a>
+                    </div>
+                    <div class="navA">
+                        <a href="https://www.google.com/maps/dir/Avenida+Independencia+1475,+Mar+del+Plata,+Provincia+de+Buenos+Aires/El+Gaucho,+ACB,+Avenida+Juan+B.+Justo,+Mar+del+Plata,+Provincia+de+Buenos+Aires/@-37.9967445,-57.5894612,14z/data=!4m14!4m13!1m5!1m1!1s0x9584dc01b677627b:0x9d834f7631e6e199!2m2!1d-57.5517059!2d-37.9942416!1m5!1m1!1s0x9584d9b659ea51ef:0x5b7a56848baa2fe3!2m2!1d-57.6091768!2d-37.9899718!3e0" target="_blank">Mapa cuadras</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <main>
+        <div id="main">
+            <div id="importe"><!--Cambie el tipo de oninput a onchange para poder almacenar la cantidad de importes solicitado, y que no sea cantidad de numero insertados(poder calcular cuantos usuarios solicitador importes)-->
+                <form method="" action="" id="formInputs" autocomplete="off">
+                    <div id="inputsDeImporte" class ="inputs">
+                        <p> Ingrese la cantidad de cuadras recorridas o a recorrer</p>
+                        <input id="preciosPorCuadras" type="text" onchange="precioConsulta(event)" placeholder="Distancia aqui">
+                        <div id="outputTextApp" class ="outPuts"><p>Ingrese la distancia</p></div> 
+                    </div>
+                    <div id="inputsDeImporteKM" class ="inputs">
+                        <p> Ingrese la cantidad de KM recorridos o a realizar</p>
+                        <input id="preciosPorKm" onchange="precioPorKm()" type="text" placeholder="Distancia aqui">
+                        <div id="outputTextAppKm" class ="outPuts"><p>Ingrese los km</p></div> 
+                    </div>
+                </form>
+            </div> 
+            <!--<div id="mapGoogle">
+                <div id="map"> Elaborar mapa interactivo
+                    <iframe width="1500" height="697" frameborder="" scrolling="" alt="mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=-57.692985534667976%2C-38.03659967391924%2C-57.46124267578126%2C-37.94162535206253&amp;layer=mapnik"
+                    ></iframe> TRABAJO PANTALLA // pantalla casa 1600 x 895
+                    <iframe width="1500" height="697" frameborder="" scrolling="" alt="mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=-57.692985534667976%2C-38.03659967391924%2C-57.46124267578126%2C-37.94162535206253&amp;layer=mapnik"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d25152.021807514186!2d-57.57452666020509!3d-38.00039688847874!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1640269088399!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                    
+                </div> 
+            
+            </div>-->
+        </div>
+    </main>   
+    <footer>    
+        <div id="footer">
+            <div id="contactFooter"> 
+                <div id="contactLink">
+                    <div id="whatsAppIcon" class="logos">
+                        <a href="https://wa.me/542234000999" target="_blank" title="whatsapp">
+                            <img src="./img/icons8-whatsapp-80.png" alt="whatsapp directo de malvinas">
+                        </a>
+                    </div>
+                    <div id="facebookIcon" class="logos">
+                        <a href="https://www.facebook.com/taximalvinas" target="_blank" title="Facebook malvinas">
+                            <img src="./img/icons8-facebook-rodeado-de-círculo-80.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div id="malvinasWebIcon" class="logos">
+                        <a href="https://www.coopislasmalvinas.com/" target="_blank" title="malvinswebsite">
+                            <img src="./img/logoMalvinas.png" alt="malvinas taxi WEB">
+                        </a>
+                    </div>
+                    <div id="indexIcon" class="logos">
+                        <a href="#header" title="Inicio">
+                            <img src="./img/islas_malvinas.jpeg" alt="Inicio">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./appcuadrasmalvianas.js"></script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap&libraries=geometry"></script> 
+    <script src="./practica.js"></script>
+    <script src="./appcuadrasmalvianas.js"></script>-->
+</body>
+</html>
